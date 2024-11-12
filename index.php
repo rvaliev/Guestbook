@@ -13,7 +13,7 @@ require_once("classes/guestbook.class.php");
 <body>
 <div class="wrapper">
 
-    <h1>Berichten!</h1>
+    <h1>Berichten!!</h1>
 
     <?php
     $postsObj = new Guestbook();

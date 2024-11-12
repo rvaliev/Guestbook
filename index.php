@@ -7,7 +7,7 @@ require_once("classes/guestbook.class.php");
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Guestbook</title>
+    <title>Guestbook test</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>

@@ -29,3 +29,6 @@ jobs:
         run: |
           echo "Content of the file:"
           cat ./decoded_file.txt
+
+# run via Github page
+# run via gh cli: gh workflow run manual.yml -f name=James -f greeting=Hello -f data=aGVsbG8gd29ybGQ=

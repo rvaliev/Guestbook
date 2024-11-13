@@ -1,0 +1,29 @@
+name: Workflow commands
+
+on: [push]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Grouping logging messages into one group
+        run: |
+          echo "::grou::My group message"
+          echo "Msg1"
+          echo "Msg2"
+          echo "::endgroup::"
+      - name: Set env variable
+        run: echo "ACTION_ENV=prod" >> $GITHUB_ENV
+      - name: Add directory to PATH
+        run: echo "/path/to/dir" >> $GITHUB_PATH
+      - name: Set output
+        id: example-step
+        run: echo "result_outside_value" >> $GITHUB_OUTPUT
+      - name: Use output
+        run: echo "The output was ${{ steps.example_step.output.result }}"
+      - name: Create debug message
+        run: echo "::debug::This is a debug message"
+      - name: Masking value
+        run: echo "::add-mask::${{ secrets.SECRET_VALUE }}"
+      - name: Fail workflow
+        run: echo "::error::This is an error message" 

@@ -1,0 +1,16 @@
+name: Conditional workflow
+
+on: [push]
+
+jobs:
+  hello-world:
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo "Hello world"
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Goodbye"
+        run: echo "Goodbye"
